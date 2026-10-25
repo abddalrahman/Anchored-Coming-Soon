@@ -1,0 +1,209 @@
+:root {
+	--y-color: #ecfbb5;
+	--b-color: #b1f7fa;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+h1 {
+	font-size: 100px;
+  letter-spacing: 4px;
+  word-spacing: 10px;
+	color: #fff;
+	filter: drop-shadow(0px 3px 4px #000000ad);
+	position: relative;
+	z-index: 10;
+	transform: translateY(0px);
+	user-select: none;
+	-webkit-user-select: none;
+	animation: elevator 25s cubic-bezier(.58,.08,.47,.95) 0s infinite;
+}
+body {
+	font-family: "Bebas Neue", sans-serif;
+}
+main {
+	background-image: linear-gradient(180deg, #4f4c47, #191813);
+}
+.cover-l {
+	background-image: radial-gradient(#fff -223%, #000);
+}
+.logo-container {
+	top: 50%;
+  inset-inline-start: 50%;
+  width: 50%;
+  height: fit-content;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  min-width: 350px;
+}
+.logo-container svg {
+	filter: grayscale(0.4) drop-shadow(0px 0px 3px #ffffff6b);
+	opacity: 0.14;
+}
+.icons-container {
+	row-gap: 150px;
+	padding: 30px 300px;
+  border: 10px solid #000000ad;
+  outline: 2px solid #d4cac026;
+  height: 100%;
+	z-index: 9;
+  border-block: 0px;
+  outline-width: 0px 1px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0px 0px 3px #d4cac04a;
+}
+.icons-container span {
+	border: 2px solid #0000005c;
+	padding: 10px;
+	width: fit-content;
+	border-radius: 50%;
+	filter: drop-shadow(0px 0px 4px #000000b2);
+}
+.arrow-icon {
+	color: var(--b-color);
+  filter: drop-shadow(0px 0px 3px var(--b-color));
+}
+.icons-container span:first-of-type .arrow-icon {
+	transform: rotate(180deg);
+	animation: elevatorLight1 25s linear 0s infinite;
+}
+.icons-container span:last-of-type .arrow-icon {
+	animation: elevatorLight1 25s linear 12.5s infinite;
+}
+.footer-text {
+	z-index: 6;
+	bottom: 16px;
+	inset-inline-start: 0px;
+	color: #ffffffcc;
+	font-size: 16px;
+	user-select: none;
+	text-align: center;
+	-webkit-user-select: none;
+	font-family: monospace, sans-serif;
+}
+
+@media screen and (max-width: 991px) {
+	.icons-container {
+		padding: 30px 170px;
+	}
+	h1 {
+		font-size: 80px;
+	}
+	.icons-container span {
+		padding: 8px;
+	}
+	.arrow-icon {
+		width: 100px;
+		height: 100px;
+	}
+	.footer-text {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.icons-container {
+		padding: 30px 90px;
+	}
+	h1 {
+		font-size: 56px;
+		letter-spacing: 2px;
+		word-spacing: 6px;
+	}
+	.icons-container span {
+		padding: 6px;
+	}
+	.arrow-icon {
+		width: 90px;
+		height: 90px;
+	}
+	.footer-text {
+		font-size: 10px;
+	}
+}
+
+
+@keyframes elevatorLight1 {
+	0% {
+		color: var(--b-color);
+		filter: drop-shadow(0px 0px 3px var(--b-color));
+	}
+	10% {
+		color: var(--b-color);
+    filter: drop-shadow(0px 0px 3px var(--b-color));
+	}
+	11% {
+		color: var(--y-color);
+    filter: drop-shadow(0px 0px 3px var(--y-color));
+	}
+	50% {
+		color: var(--y-color);
+    filter: drop-shadow(0px 0px 3px var(--y-color));
+	}
+	51% {
+		color: var(--b-color);
+		filter: drop-shadow(0px 0px 3px var(--b-color));
+	}
+	100% {
+		color: var(--b-color);
+		filter: drop-shadow(0px 0px 3px var(--b-color));
+	}
+}
+@keyframes elevator {
+	0% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	15% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	31% {
+		transform: translateY(-500px);
+		opacity: 1;
+	}
+	32% {
+		transform: translateY(-500px);
+		opacity: 0;
+	}
+	33% {
+		transform: translateY(500px);
+		opacity: 0;
+	}
+	34% {
+		transform: translateY(500px);
+		opacity: 1;
+	}
+	50% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	65% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	81% {
+		transform: translateY(500px);
+		opacity: 1;
+	}
+	82% {
+		transform: translateY(500px);
+		opacity: 0;
+	}
+	83% {
+		transform: translateY(-500px);
+		opacity: 0;
+	}
+	84% {
+		transform: translateY(-500px);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
